@@ -1,0 +1,47 @@
+# Build outputs
+build/
+*.iso
+*.img
+
+# Desktop environment
+desktop-environment/node_modules/
+desktop-environment/dist/
+desktop-environment/out/
+
+# Logs
+*.log
+logs/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Chroot directory (created during build)
+chroot/
+
+# Package files
+*.deb
+*.rpm
+
+# Secrets (never commit)
+.env
+secrets/
+*.key
+*.pem
+
+# Cache
+.cache/
+__pycache__/
+*.pyc

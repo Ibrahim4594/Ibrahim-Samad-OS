@@ -1,0 +1,31 @@
+{
+  "name": "ibrahimsamados-desktop",
+  "version": "1.0.0",
+  "description": "Ultimate gaming desktop environment for Ibrahim Samad OS",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "dev": "electron . --dev"
+  },
+  "keywords": [
+    "desktop",
+    "gaming",
+    "linux"
+  ],
+  "author": "GameOS Team",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "electron": "^40.0.0",
+    "electron-builder": "^26.4.0"
+  },
+  "build": {
+    "appId": "com.gameos.desktop",
+    "linux": {
+      "target": [
+        "deb"
+      ],
+      "category": "System"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+# GameOS Build Configuration
+
+distro:
+  name: "Ibrahim Samad OS"
+  version: "1.0.0"
+  codename: "Ultimate Gaming Edition"
+
+base:
+  distribution: "ubuntu"
+  release: "24.04"  # Noble Numbat - Latest LTS
+  architecture: "amd64"
+
+desktop:
+  name: "GameOS Desktop"
+  type: "custom"  # Custom Electron/Tauri based UI
+
+gaming:
+  # Pre-installed gaming software
+  steam: true
+  lutris: true
+  heroic_launcher: true  # Epic Games
+  protonge: true
+  mangohud: true  # FPS overlay
+  gamemode: true  # Performance optimization
+
+drivers:
+  nvidia: true
+  amd: true
+  intel: true
+
+kernel:
+  type: "xanmod"  # Gaming-optimized kernel
+  version: "latest"
+
+performance:
+  cpu_governor: "performance"
+  vm_swappiness: 10
+  gaming_tweaks: true
+
+packages:
+  # Essential gaming dependencies
+  - vulkan-tools
+  - mesa-vulkan-drivers
+  - wine-staging
+  - winetricks
+  - discord
+  - obs-studio
+
+customization:
+  wallpaper: "assets/wallpapers/default.jpg"
+  theme: "dark"
+  accent_color: "#00FF88"  # Neon green
+
+iso:
+  filename: "gameos-{version}-{arch}.iso"
+  compression: "xz"
+  boot_type: "uefi"  # Support both UEFI and legacy

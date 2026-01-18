@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameOS Desktop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Desktop Container -->
+    <div class="desktop">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <div class="logo">
+                    <span class="logo-icon">🚀</span>
+                    <span class="logo-text">Ibrahim Samad OS</span>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="search" placeholder="Search games and apps...">
+                </div>
+            </div>
+            <div class="top-bar-right">
+                <div class="system-stats">
+                    <span id="cpu-usage">CPU: --</span>
+                    <span id="gpu-usage">GPU: --</span>
+                    <span id="ram-usage">RAM: --</span>
+                </div>
+                <div class="time" id="time">00:00</div>
+                <div class="user-menu">
+                    <button class="icon-button" id="settings-btn">⚙️</button>
+                    <button class="icon-button" id="power-btn">⏻</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Sidebar Navigation -->
+            <div class="sidebar">
+                <nav class="nav-menu">
+                    <button class="nav-item active" data-view="library">
+                        <span class="nav-icon">🎮</span>
+                        <span class="nav-text">Library</span>
+                    </button>
+                    <button class="nav-item" data-view="store">
+                        <span class="nav-icon">🛒</span>
+                        <span class="nav-text">Store</span>
+                    </button>
+                    <button class="nav-item" data-view="apps">
+                        <span class="nav-icon">📦</span>
+                        <span class="nav-text">Applications</span>
+                    </button>
+                    <button class="nav-item" data-view="downloads">
+                        <span class="nav-icon">⬇️</span>
+                        <span class="nav-text">Downloads</span>
+                    </button>
+                    <button class="nav-item" data-view="performance">
+                        <span class="nav-icon">📊</span>
+                        <span class="nav-text">Performance</span>
+                    </button>
+                </nav>
+            </div>
+
+            <!-- Content Views -->
+            <div class="content-area">
+                <!-- Library View -->
+                <div class="view active" id="library-view">
+                    <div class="view-header">
+                        <h1>Game Library</h1>
+                        <div class="view-controls">
+                            <button class="filter-btn">🎯 Recently Played</button>
+                            <button class="filter-btn">⭐ Favorites</button>
+                            <button class="view-toggle">⊞</button>
+                        </div>
+                    </div>
+                    <div class="games-grid" id="games-grid">
+                        <!-- Games will be dynamically loaded here -->
+                        <div class="game-card">
+                            <div class="game-cover">
+                                <div class="game-placeholder">Add Games</div>
+                            </div>
+                            <div class="game-info">
+                                <h3>Your Games</h3>
+                                <p>Install Steam, Lutris or add games manually</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Applications View -->
+                <div class="view" id="apps-view">
+                    <div class="view-header">
+                        <h1>Applications</h1>
+                    </div>
+                    <div class="apps-grid" id="apps-grid">
+                        <!-- Apps will be dynamically loaded -->
+                    </div>
+                </div>
+
+                <!-- Performance View -->
+                <div class="view" id="performance-view">
+                    <div class="view-header">
+                        <h1>Performance Monitor</h1>
+                    </div>
+                    <div class="performance-dashboard">
+                        <div class="perf-card">
+                            <h3>CPU Usage</h3>
+                            <canvas id="cpu-chart"></canvas>
+                        </div>
+                        <div class="perf-card">
+                            <h3>GPU Usage</h3>
+                            <canvas id="gpu-chart"></canvas>
+                        </div>
+                        <div class="perf-card">
+                            <h3>Memory Usage</h3>
+                            <canvas id="ram-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Power Menu Modal -->
+    <div class="modal" id="power-menu" style="display: none;">
+        <div class="modal-content">
+            <h2>Power Options</h2>
+            <button class="power-option" id="logout-btn">
+                <span>🚪</span>
+                Logout
+            </button>
+            <button class="power-option" id="restart-btn">
+                <span>🔄</span>
+                Restart
+            </button>
+            <button class="power-option" id="shutdown-btn">
+                <span>⏻</span>
+                Shutdown
+            </button>
+            <button class="cancel-btn" id="cancel-power">Cancel</button>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

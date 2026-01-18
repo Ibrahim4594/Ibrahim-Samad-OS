@@ -1,0 +1,57 @@
+GPL-3.0 License
+
+GameOS - A Gaming-Focused Linux Distribution
+Copyright (C) 2026 GameOS Contributors
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+---
+
+THIRD-PARTY COMPONENTS
+
+This project incorporates the following third-party software:
+
+1. Ubuntu Linux
+   - License: Various open source licenses
+   - Copyright: Canonical Ltd. and contributors
+   - https://ubuntu.com/legal
+
+2. Electron
+   - License: MIT License
+   - Copyright: OpenJS Foundation and contributors
+   - https://github.com/electron/electron
+
+3. Steam (included in builds)
+   - License: Proprietary (Valve Corporation)
+   - Steam is trademark of Valve Corporation
+   - https://store.steampowered.com/subscriber_agreement/
+
+4. Linux Kernel
+   - License: GPL-2.0
+   - Copyright: Linus Torvalds and contributors
+   - https://www.kernel.org/
+
+5. Various Ubuntu/Debian Packages
+   - Each package maintains its own license
+   - See /usr/share/doc/*/copyright on installed system
+
+DISCLAIMER
+
+GameOS is not affiliated with or endorsed by:
+- Canonical Ltd. (Ubuntu)
+- Valve Corporation (Steam)
+- Microsoft Corporation
+- Any game publishers or developers
+
+All trademarks are property of their respective owners.
